@@ -24,7 +24,7 @@ export default function WorkSection() {
           <h4 className={classes.description}>
             Here you can send a message to us for a repair or toner delivery.
           </h4>
-          <form>
+          <form netlify>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
