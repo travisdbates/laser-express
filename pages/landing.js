@@ -12,6 +12,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
+import Link from '@material-ui/core/Link'
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import logo from "../assets/img/NewLogoWhite.png"
@@ -56,14 +57,15 @@ export default function LandingPage(props) {
                 Laser Express has been keeping Utah County printing for over two decades. We're here to simplify your business needs and do our best to serve you with a smile.
               </h4>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                target="_blank"
-              >
-                <i className="fas fa-play" />
-                Watch video
+              <Link href="#service" style={{ textDecoration: 'none' }}>
+                <Button
+                  color="danger"
+                  size="lg"
+                >
+                  <i className="fas fa-wrench" />
+                  &nbsp;&nbsp;Submit Service Request
               </Button>
+              </Link>
             </GridItem>
           </GridContainer>
         </div>
@@ -72,6 +74,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
+          <div id="service" name="service"></div>
           <WorkSection />
         </div>
       </div>
