@@ -24,10 +24,11 @@ export default function WorkSection() {
           <h4 className={classes.description}>
             Here you can send a message to us for a repair or toner delivery.
           </h4>
-          <form netlify>
+          <form name="contact" method="POST" data-netlify="true">
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  name="contact"
                   labelText="Your Name"
                   id="name"
                   formControlProps={{
@@ -37,6 +38,7 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  name="contact"
                   labelText="Your Email"
                   id="email"
                   formControlProps={{
@@ -45,6 +47,7 @@ export default function WorkSection() {
                 />
               </GridItem>
               <CustomInput
+                name="contact"
                 labelText="Your Message"
                 id="message"
                 formControlProps={{
