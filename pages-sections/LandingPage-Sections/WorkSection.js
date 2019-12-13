@@ -57,7 +57,7 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                <Button color="danger">Send Message</Button>
+                <Button color="danger" type="submit">Send Message</Button>
               </GridItem>
             </GridContainer>
           </form>
