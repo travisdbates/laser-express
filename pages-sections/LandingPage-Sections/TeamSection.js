@@ -20,7 +20,7 @@ import brother from "assets/img/brother-logo-vector.png";
 import hp from "assets/img/hp-logo.png";
 import canon from "assets/img/canon.jpg";
 import lexmark from "assets/img/lexmark-logo.png";
-import epson from "assets/img/Epson-logo.jpg";
+import epson from "assets/img/Epson-logo.png";
 
 const useStyles = makeStyles(styles);
 
@@ -94,6 +94,7 @@ export default function TeamSection() {
           </GridItem>
         </GridContainer>
       </div>
+      <h7 style={{ color: 'lightgrey' }}>All product names, trademarks and registered trademarks are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names,trademarks and brands does not imply endorsement.</h7>
     </div>
   );
 }
