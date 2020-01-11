@@ -14,6 +14,12 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/wor
 
 const useStyles = makeStyles(styles);
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 export default function WorkSection() {
   const [state, setState] = React.useState({})
 
