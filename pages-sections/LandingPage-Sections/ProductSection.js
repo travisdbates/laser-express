@@ -36,7 +36,7 @@ export default function ProductSection() {
               title="Printer Repair"
               description="When your printer breaks, you need an expert on the scene to get you up and running fast. That’s why we offer on demand printer repair to you or your business."
               icon={Build}
-              iconColor="info"
+              iconColor="danger"
               vertical
             />
           </GridItem>
@@ -45,7 +45,7 @@ export default function ProductSection() {
               title="Toner Cartridges"
               description="We have competitive prices, and in most cases provide local same-day toner delivery free of charge."
               icon={Print}
-              iconColor="info"
+              iconColor="danger"
               vertical
             />
           </GridItem>
@@ -54,7 +54,7 @@ export default function ProductSection() {
               title="Customer Service"
               description="We offer only the highest quality service, repair, and parts. Our Technicians are HP certified and are experts in printer repair and maintenance."
               icon={PersonIcon}
-              iconColor="info"
+              iconColor="danger"
               vertical
             />
           </GridItem>

@@ -25,7 +25,9 @@ export default function WorkSection() {
             Here you can send a message to us for a repair or toner delivery.
           </h4>
           <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="name" />
+            <input type="hidden" name="email" />
+            <input type="hidden" name="message" />
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput

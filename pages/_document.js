@@ -34,6 +34,7 @@ class MyDocument extends Document {
           <div id="page-transition"></div>
           <Main />
           <NextScript />
+          <script src="https://kwes.io/js/kwes.js"></script>
         </body>
       </html>
     );
