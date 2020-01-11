@@ -38,7 +38,8 @@ export default function WorkSection() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => console.log("Success"))
+
       .catch((error) => alert(error))
   }
 
