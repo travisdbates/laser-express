@@ -97,7 +97,7 @@ export default function WorkSection() {
                   <FormLabel component="legend" className={classes.formControl}>Type of Request</FormLabel>
                   <RadioGroup className={classes.formControl} aria-label="request" name="service-type" onChange={handleChange}>
                     <FormControlLabel value="toner" control={<Radio />} label="Toner Cartridges" />
-                    <FormControlLabel value="printer" control={<Radio />} label="Printer" />
+                    <FormControlLabel value="printer" control={<Radio />} label="Printer Repair" />
                     <FormControlLabel value="other" control={<Radio />} label="Other" />
                   </RadioGroup>
                 </FormControl>
