@@ -32,8 +32,7 @@ export default function Footer(props) {
         <div className={classes.left}>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} Laser Express
-
+          &copy; {1900 + new Date().getYear()} Laser Express | 801.373.1416 | 44 N University Ave. Provo, UT, 84601
         </div>
       </div>
     </footer>

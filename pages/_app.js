@@ -25,6 +25,8 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "assets/scss/nextjs-material-kit.scss?v=1.0.0";
 
+import { initGA, logPageView } from '../utils/analytics'
+
 Router.events.on("routeChangeStart", url => {
   console.log(`Loading: ${url}`);
   document.body.classList.add("body-page-transition");
@@ -52,6 +54,15 @@ export default class MyApp extends App {
 
     return { pageProps };
   }
+
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  }
+
   render() {
     const { Component, pageProps } = this.props;
 

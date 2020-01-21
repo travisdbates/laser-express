@@ -16,12 +16,25 @@ const workStyle = {
     color: "#999",
     textAlign: "center"
   },
+  error: {
+    color: "#E34B36",
+    textAlign: "center"
+  },
+  success: {
+    color: "#4caf50",
+    textAlign: "center"
+  },
   textCenter: {
     textAlign: "center"
   },
   textArea: {
     marginRight: "15px",
     marginLeft: "15px"
+  },
+  formControl: {
+    display: 'flex',
+    flexDirection: 'row',
+    color: "#999"
   }
 };
 
