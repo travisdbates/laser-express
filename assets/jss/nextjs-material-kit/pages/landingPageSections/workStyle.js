@@ -17,7 +17,7 @@ const workStyle = {
     textAlign: "center"
   },
   error: {
-    color: "#E34B36",
+    color: "#4E77C3",
     textAlign: "center"
   },
   success: {
