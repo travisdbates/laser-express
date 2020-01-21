@@ -36,10 +36,11 @@ export default function WorkSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!state.contact || !state['service-type'] || !state.email || !state.message) {
+    if (!state.contact || !state.serviceType || !state.email || !state.message) {
       setState({ ...state, error: true })
       return;
     }
+    console.log(JSON.stringify(state))
     fetch('https://tuix5j5iii.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -109,7 +110,7 @@ export default function WorkSection() {
               <GridItem xs={12} sm={12} md={12}>
                 <FormControl component="fieldset" className={classes.formControl}>
                   <FormLabel component="legend" className={classes.formControl}>Type of Request</FormLabel>
-                  <RadioGroup className={classes.formControl} aria-label="request" name="service-type" onChange={handleChange}>
+                  <RadioGroup className={classes.formControl} aria-label="request" name="serviceType" onChange={handleChange}>
                     <FormControlLabel value="toner" control={<Radio />} label="Toner Cartridges" />
                     <FormControlLabel value="printer" control={<Radio />} label="Printer Repair" />
                     <FormControlLabel value="other" control={<Radio />} label="Other" />

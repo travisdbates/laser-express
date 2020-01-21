@@ -5,22 +5,23 @@ const AWS = require('aws-sdk');
 const SES = new AWS.SES();
 
 function sendEmail(formData, callback) {
+  const { contact, serviceType, email, company, message } = formData
   const emailParams = {
     Source: 'travisbatesdev@gmail.com', // SES SENDING EMAIL
     ReplyToAddresses: [formData.reply_to],
     Destination: {
-      ToAddresses: ['travisbatesdev@gmail.com'], // SES RECEIVING EMAIL
+      ToAddresses: ['travisbatesdev@gmail.com', 'accounting@laserexpressutah.com'], // SES RECEIVING EMAIL
     },
     Message: {
       Body: {
         Text: {
           Charset: 'UTF-8',
-          Data: `${formData.message}\n\nName: ${formData.name}\nEmail: ${formData.reply_to}`,
+          Data: `Name: ${contact}\n\nEmail: ${email}\n\nCompany: ${company}\n\nService Type: ${serviceType}\n\nMessage: ${message}`,
         },
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: 'New message from laserexpressutah.com',
+        Data: 'New request from laserexpressutah.com',
       },
     },
   };
