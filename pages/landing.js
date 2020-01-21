@@ -23,6 +23,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 import ProductSection from "pages-sections/LandingPage-Sections/ProductSection.js";
 import TeamSection from "pages-sections/LandingPage-Sections/TeamSection.js";
 import WorkSection from "pages-sections/LandingPage-Sections/WorkSection.js";
+import MapSection from "pages-sections/LandingPage-Sections/MapSection.js";
 
 const dashboardRoutes = [];
 
@@ -76,6 +77,7 @@ export default function LandingPage(props) {
           <TeamSection />
           <div id="service" name="service"></div>
           <WorkSection />
+          <MapSection />
         </div>
       </div>
       <Footer />
