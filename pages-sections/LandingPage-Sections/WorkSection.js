@@ -107,7 +107,7 @@ export default function WorkSection() {
 
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={12}>
+              <GridItem xs={12} sm={12} md={12} style={{ marginTop: '20px' }}>
                 <FormControl component="fieldset" className={classes.formControl}>
                   <FormLabel component="legend" className={classes.formControl}>Type of Request</FormLabel>
                   <RadioGroup className={classes.formControl} aria-label="request" name="serviceType" onChange={handleChange}>

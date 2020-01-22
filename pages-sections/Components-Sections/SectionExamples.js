@@ -24,7 +24,7 @@ export default function SectionExamples() {
       <div className={classes.container}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
-            <Link href="/landing">
+            <Link href="/">
               <a className={classes.link}>
                 <img
                   src={landing}

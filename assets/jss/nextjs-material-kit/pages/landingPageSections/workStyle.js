@@ -13,7 +13,7 @@ const workStyle = {
     textAlign: "center"
   },
   description: {
-    color: "#999",
+    color: "#757575",
     textAlign: "center"
   },
   error: {
@@ -34,7 +34,8 @@ const workStyle = {
   formControl: {
     display: 'flex',
     flexDirection: 'row',
-    color: "#999"
+    color: "#999",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
   }
 };
 
