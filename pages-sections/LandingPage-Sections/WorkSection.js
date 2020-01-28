@@ -49,7 +49,6 @@ export default function WorkSection() {
       .then((response) => response.json())
       .then((jsonResponse => {
         setState({ ...state, success: true })
-        console.log(jsonResponse)
       }))
       .catch((error) => alert(error))
 
