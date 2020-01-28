@@ -28,8 +28,8 @@ export default function WorkSection() {
             <GridContainer justify="center">
                 <GridItem xs>
                     <h2 className={classes.title}>Our Location</h2>
-                    <iframe width={'100%'} height={450} frameborder="0" style={{ border: 0 }}
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwcMxa1OXTYcRrcORV-5SBI4&key=AIzaSyBejpJEsgMAk6uNlTxuG7z8SOP95RWZnpw" allowfullscreen></iframe>
+                    <iframe width={'100%'} height={450} frameBorder="0" style={{ border: 0 }}
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwcMxa1OXTYcRrcORV-5SBI4&key=AIzaSyBejpJEsgMAk6uNlTxuG7z8SOP95RWZnpw" allowFullScreen></iframe>
                 </GridItem>
             </GridContainer>
         </div >
