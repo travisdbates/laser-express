@@ -8,7 +8,7 @@ function sendEmail(formData, callback) {
   const { contact, serviceType, email, company, message } = formData
   const emailParams = {
     Source: 'accounting@laserexpressutah.com', // SES SENDING EMAIL
-    ReplyToAddresses: [formData.reply_to],
+    ReplyToAddresses: [email, 'accounting@laserexpressutah.com'],
     Destination: {
       ToAddresses: ['travisbatesdev@gmail.com', 'accounting@laserexpressutah.com'], // SES RECEIVING EMAIL
     },
