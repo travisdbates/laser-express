@@ -1,27 +1,27 @@
 // handler.js
 
-'use strict';
-const AWS = require('aws-sdk');
+"use strict";
+const AWS = require("aws-sdk");
 const SES = new AWS.SES();
 
 function sendEmail(formData, callback) {
-  const { contact, serviceType, email, company, message } = formData
+  const { contact, serviceType, email, company, message } = formData;
   const emailParams = {
-    Source: 'accounting@laserexpressutah.com', // SES SENDING EMAIL
-    ReplyToAddresses: [email, 'accounting@laserexpressutah.com'],
+    Source: "accounting@laserexpressutah.com", // SES SENDING EMAIL
+    ReplyToAddresses: [email, "accounting@laserexpressutah.com"],
     Destination: {
-      ToAddresses: ['travisbatesdev@gmail.com', 'accounting@laserexpressutah.com'], // SES RECEIVING EMAIL
+      ToAddresses: ["accounting@laserexpressutah.com"], // SES RECEIVING EMAIL
     },
     Message: {
       Body: {
         Text: {
-          Charset: 'UTF-8',
+          Charset: "UTF-8",
           Data: `Name: ${contact}\n\nEmail: ${email}\n\nCompany: ${company}\n\nService Type: ${serviceType}\n\nMessage: ${message}`,
         },
       },
       Subject: {
-        Charset: 'UTF-8',
-        Data: 'New request from laserexpressutah.com',
+        Charset: "UTF-8",
+        Data: "New request from laserexpressutah.com",
       },
     },
   };
@@ -36,9 +36,9 @@ module.exports.staticSiteMailer = (event, context, callback) => {
     const response = {
       statusCode: err ? 500 : 200,
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify({
         message: err ? err.message : data,
@@ -46,5 +46,5 @@ module.exports.staticSiteMailer = (event, context, callback) => {
     };
 
     callback(null, response);
-  })
-}
+  });
+};

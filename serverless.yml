@@ -1,3 +1,5 @@
+org: travisdbates
+app: laser-express-form-email
 # Welcome to Serverless!
 #
 # This file is the main config file for your service.
@@ -13,6 +15,15 @@
 
 service: static-site-mailer
 
+package:
+  exclude:
+    - node_modules/**
+    - assets/**
+    - components/**
+    - pages/**
+    - pages-sections/**
+    - utils/**
+
 provider:
   name: aws
   runtime: nodejs12.x
@@ -21,7 +32,7 @@ provider:
       Action:
         - "ses:SendEmail"
       Resource: ["*"]
-  profile: serverless-personal
+  profile: serverless-1
 
 functions:
   staticSiteMailer:

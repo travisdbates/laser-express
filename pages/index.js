@@ -12,10 +12,10 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
-import Link from '@material-ui/core/Link'
+import Link from "@material-ui/core/Link";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-import logo from "../assets/img/NewLogoWhite.png"
+import logo from "../assets/img/NewLogoWhite.png";
 
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
@@ -25,7 +25,7 @@ import TeamSection from "pages-sections/LandingPage-Sections/TeamSection.js";
 import WorkSection from "pages-sections/LandingPage-Sections/WorkSection.js";
 import MapSection from "pages-sections/LandingPage-Sections/MapSection.js";
 
-const dashboardRoutes = [];
+const dashboardRoutes = ["/"];
 
 const useStyles = makeStyles(styles);
 
@@ -42,7 +42,7 @@ export default function LandingPage(props) {
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -51,21 +51,23 @@ export default function LandingPage(props) {
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               {/* <h1 className={classes.title}>We keep you printing.</h1> */}
-              <img src={logo} style={{ width: '33vw', minWidth: '300px' }}></img>
+              <img
+                src={logo}
+                style={{ width: "33vw", minWidth: "300px" }}
+              ></img>
               <br />
               <br />
               <h4>
-                Laser Express has been keeping Utah County printing for over two decades. We're here to simplify your business needs and do our best to serve you with a smile.
+                Laser Express has been keeping Utah County printing for over two
+                decades. We're here to simplify your business needs and do our
+                best to serve you with a smile.
               </h4>
               <br />
-              <Link href="#service" style={{ textDecoration: 'none' }}>
-                <Button
-                  color="danger"
-                  size="lg"
-                >
+              <Link href="#service" style={{ textDecoration: "none" }}>
+                <Button color="danger" size="lg">
                   <i className="fas fa-wrench" />
                   &nbsp;&nbsp;Submit Service Request
-              </Button>
+                </Button>
               </Link>
             </GridItem>
           </GridContainer>
@@ -81,6 +83,6 @@ export default function LandingPage(props) {
         </div>
       </div>
       <Footer />
-    </div >
+    </div>
   );
 }
